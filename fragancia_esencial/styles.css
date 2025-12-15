@@ -1,0 +1,691 @@
+/* ============================
+   TIPOGRAFÍA
+============================ */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #f5f5f5;
+}
+
+/* ============================
+   BARRA SUPERIOR
+============================ */
+.top-bar {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+/* ============================
+   NAVBAR PREMIUM
+============================ */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(6px);
+  padding: 0.8rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* BOTONES DEL MENÚ */
+.nav-links a {
+  padding: 0.5rem 1.2rem;
+  background: #d8c08a;
+  color: #111 !important;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  background: #fff;
+  color: #111 !important;
+  transform: translateY(-2px);
+}
+
+
+/* LOGO */
+.navbar .logo img {
+  height: 55px;
+  width: auto;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
+}
+
+/* MENÚ */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d8c08a;
+}
+
+/* EFECTO SCROLL */
+.navbar.scrolled {
+  background: #111;
+  border-bottom: 1px solid #d8c08a;
+}
+
+/* HAMBURGUESA */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+/* RESPONSIVE NAV */
+@media (max-width: 850px) {
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 60%;
+    background: #111;
+    flex-direction: column;
+    padding-top: 6rem;
+    gap: 2rem;
+    transition: 0.4s ease;
+    padding-left: 2rem;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.3rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* ============================
+   DESTACADOS HORIZONTAL
+============================ */
+
+.destacados {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.destacados .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Scroll horizontal */
+.destacados-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.destacados-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.destacados-scroll::-webkit-scrollbar-thumb {
+  background: #d8c08a;
+  border-radius: 10px;
+}
+
+.destacado-card {
+  min-width: 200px;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+  transition: 0.3s ease;
+}
+
+.destacado-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.destacado-card img {
+  width: 140px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.destacado-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.destacado-card .price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #d8c08a;
+}
+
+
+/* ============================
+   BANNER PREMIUM
+============================ */
+.banner {
+  background: url('https://images.unsplash.com/photo-1523293836414-f04e712e1c8f') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.banner-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 650px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.banner-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  margin-bottom: 1rem;
+}
+
+.banner-text p {
+  font-size: 1.3rem;
+  color: #f2f2f2;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
+  margin-bottom: 1.8rem;
+}
+
+.btn {
+  background: #d8c08a;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  transform: translateY(-3px);
+}
+
+/* ============================
+   PRODUCT DETAIL PREMIUM
+============================ */
+
+.product-container {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gallery-main {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.gallery-thumbs {
+  display: flex;
+  gap: 1rem;
+}
+
+.gallery-thumbs img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.gallery-thumbs img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.product-info .price {
+  font-size: 1.8rem;
+  color: #d8c08a;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.product-info ul {
+  padding-left: 1.2rem;
+}
+
+.product-info li {
+  margin-bottom: 0.4rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================
+   ESTILO MERCADO LIBRE PREMIUM
+============================ */
+
+.ml-product-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+}
+
+/* GALERÍA */
+.ml-gallery {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.ml-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ml-thumbs img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.ml-thumbs img:hover {
+  border-color: #d8c08a;
+}
+
+.ml-main-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* INFO */
+.ml-info h1 {
+  font-size: 1.9rem;
+  margin-bottom: 1rem;
+}
+
+.ml-price {
+  font-size: 2rem;
+  color: #2ecc71;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.ml-sub {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* BOTÓN DE COMPRA */
+.ml-buy-btn {
+  display: block;
+  background: #2ecc71;
+  color: #fff;
+  padding: 0.9rem 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+}
+
+.ml-buy-btn:hover {
+  background: #27ae60;
+}
+
+/* BOTÓN VOLVER */
+.ml-back-btn {
+  display: block;
+  background: #eee;
+  color: #333;
+  padding: 0.8rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  transition: 0.3s;
+}
+
+.ml-back-btn:hover {
+  background: #ddd;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .ml-product-container {
+    grid-template-columns: 1fr;
+  }
+
+  .ml-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ml-thumbs {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+
+/* ============================
+   SECCIÓN DE PERFUMES
+============================ */
+.perfumes-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.perfumes-section .section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.perfumes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.perfume-card {
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.perfume-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.perfume-card img {
+  width: 160px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.perfume-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #d8c08a;
+  margin-bottom: 1rem;
+}
+
+.btn-perfume {
+  display: inline-block;
+  padding: 0.7rem 1.6rem;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-perfume:hover {
+  background: #d8c08a;
+  color: #111;
+}
+
+/* ============================
+   BOTONES DE CATEGORÍAS PREMIUM
+============================ */
+
+.category-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+/* Oscurecer un poco la imagen para que el texto se lea */
+.category-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  transition: 0.3s ease;
+}
+
+.category-box:hover::after {
+  background: rgba(0,0,0,0.55);
+}
+
+.category-box span {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+}
+
+/* Hover efecto premium */
+.category-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+/* GRID RESPONSIVE */
+.perfumes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+
+/* Alinear tarjetas de productos */
+.perfume-card,
+.destacado-card,
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 330px; /* Ajustá si querés más alto o más bajo */
+}
+
+/* Imagen centrada y pareja */
+.perfume-card img,
+.destacado-card img,
+.product-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin: 0 auto 1rem auto;
+}
+
+/* Nombre alineado */
+.perfume-card h3,
+.destacado-card h3,
+.product-card h3 {
+  min-height: 45px; /* asegura que todos ocupen el mismo espacio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Precio alineado */
+.price {
+  min-height: 30px; /* espacio fijo para que no se muevan */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ============================
+   FOOTER PREMIUM
+============================ */
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 3rem 2rem;
+  margin-top: 3rem;
+}
+
+/* LOGO CENTRADO */
+.footer-logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo-img {
+  max-width: 180px;
+  height: auto;
+  margin: auto;
+  display: block;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
+}
+
+/* GRID INFO */
+.footer-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+}
+
+.footer-section h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #d8c08a;
+}
+
+.footer-section p {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+.footer-link {
+  display: block;
+  margin: 0.4rem 0;
+  color: #d8c08a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.copy {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #bbb;
+}

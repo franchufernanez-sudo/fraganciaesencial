@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfumes de Mujer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="imagenes/logo.jpg" alt="Fragancias Perfume Gallery">
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="perfumes.html">Catálogo</a>
+  </nav>
+
+  <div class="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<main class="container">
+
+  <h1 class="section-title">Perfumes de Mujer</h1>
+
+  <div class="perfumes-grid">
+
+    <div class="perfume-card">
+      <img src="https://via.placeholder.com/150" alt="Good Girl">
+      <h3>Good Girl – Carolina Herrera</h3>
+      <p class="price">$49.000</p>
+      <a href="#" class="btn-perfume">Ver más</a>
+    </div>
+
+    <div class="perfume-card">
+      <img src="https://via.placeholder.com/150" alt="J'adore Dior">
+      <h3>J'adore – Dior</h3>
+      <p class="price">$55.000</p>
+      <a href="#" class="btn-perfume">Ver más</a>
+    </div>
+
+    <div class="perfume-card">
+      <img src="https://via.placeholder.com/150" alt="La Vie Est Belle">
+      <h3>La Vie Est Belle – Lancôme</h3>
+      <p class="price">$72.000</p>
+      <a href="#" class="btn-perfume">Ver más</a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:2rem;">
+    <a href="perfumes.html" class="btn-perfume">Volver al catálogo</a>
+  </div>
+
+</main>
+
+  <footer class="footer">
+
+  <!-- LOGO CENTRADO -->
+  <div class="footer-logo">
+    <img src="imagenes/logo.jpg" alt="Fragancias Perfume Gallery" class="logo-img">
+  </div>
+
+  <!-- GRID DE INFORMACIÓN -->
+  <div class="footer-grid">
+
+    <!-- UBICACIÓN -->
+    <div class="footer-section">
+      <h3>Ubicación</h3>
+      <p>📍 Buenos Aires, Argentina</p>
+      <p>📌 Envíos a todo el país</p>
+      <a href="https://maps.google.com/?q=Buenos+Aires" target="_blank" class="footer-link">Ver en Google Maps</a>
+    </div>
+
+    <!-- MEDIOS DE PAGO -->
+    <div class="footer-section">
+      <h3>Medios de Pago</h3>
+      <p>📱 Mercado Pago</p>
+      <p>💸 Transferencias bancarias</p>
+      <p>💵 Efectivo</p>
+    </div>
+
+    <!-- CONTACTO -->
+    <div class="footer-section">
+      <h3>Contacto</h3>
+      <p>📞 11 3866 1846</p>
+    <!--  <p>📧 info@aroma.com</p>-->
+      <a href="https://wa.me/5491138661846" target="_blank" class="footer-link">Enviar WhatsApp</a>
+    </div>
+
+    <!-- REDES -->
+    <div class="footer-section">
+      <h3>Redes</h3>
+      <a href="https://www.instagram.com/fragancia.esencial.ar/" target="_blank" class="footer-link">Instagram</a>
+      <a href="https://facebook.com" target="_blank" class="footer-link">Facebook</a>
+    </div>
+
+  </div>
+
+  <p class="copy">© 2025 Fragancias Perfume Gallery — Todos los derechos reservados</p>
+</footer>
+
+<script>
+  const navbar = document.querySelector('.navbar');
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+  });
+</script>
+
+</body>
+</html>

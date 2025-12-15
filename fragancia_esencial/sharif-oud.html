@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharif Oud - Detalle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="imagenes/logo.jpg" alt="Fragancias Perfume Gallery">
+  </div>
+  <nav class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="perfumes.html">Catálogo</a>
+    <a href="arabes.html">Árabes</a>
+  </nav>
+  <div class="hamburger"><span></span><span></span><span></span></div>
+</header>
+
+<main class="ml-product-container">
+
+  <!-- GALERÍA -->
+  <div class="ml-gallery">
+
+    <div class="ml-thumbs">
+      <img src="imagenes/sharifoud.jpg" onclick="changeImage(this.src)">
+      <img src="imagenes/sharifoudcaja.jpg" onclick="changeImage(this.src)">
+      <img src="imagenes/arabenegro.mp4" onclick="changeImage(this.src)">
+    </div>
+
+    <img id="mainImage" src="imagenes/sharifoud.jpg" class="ml-main-img">
+
+  </div>
+
+  <!-- INFO Y COMPRA -->
+  <div class="ml-info">
+
+    <h1>Sharif Oud - Hombre</h1>
+
+    <p class="ml-price">$44.999</p>
+
+    <p class="ml-sub">Inspirado en: Oud for Glory (Lattafa)</p>
+
+    <a href="https://wa.me/5491138661846?text=Hola!%20Quiero%20comprar%20Sharif%20Oud" 
+       target="_blank" class="ml-buy-btn">
+      Comprar ahora
+    </a>
+
+      <!-- BOTÓN VOLVER (DINÁMICO) -->
+      <a id="volverBtn" class="ml-back-btn">Volver</a>
+
+    <hr>
+
+    <h3>Descripción</h3>
+    <p>Un perfume árabe intenso, profundo y elegante. Ideal para noches especiales y climas fríos.</p>
+
+    <h3>Notas olfativas</h3>
+    <ul>
+      <li>Oud</li>
+      <li>Ámbar</li>
+      <li>Especias</li>
+    </ul>
+
+  </div>
+
+</main>
+
+
+<footer class="footer">
+  <div class="footer-logo">
+    <img src="imagenes/logo.jpg" class="logo-img">
+  </div>
+  <p class="copy">© 2025 Fragancias Perfume Gallery</p>
+</footer>
+
+  <!-- JS CAMBIO DE IMAGEN + VOLVER DINÁMICO -->
+  <script>
+    function changeImage(src) {
+      document.getElementById("mainImage").src = src;
+    }
+
+    // ✅ SISTEMA DE VOLVER SEGÚN LA CATEGORÍA
+    const params = new URLSearchParams(window.location.search);
+    const from = params.get("from");
+
+    let volverA = "perfumes.html"; // fallback si no viene nada
+
+    if (from === "arabes") volverA = "arabes.html";
+    if (from === "hombre") volverA = "hombre.html";
+    if (from === "mujer") volverA = "mujer.html";
+    if (from === "unisex") volverA = "unisex.html";
+    if (from === "alternativas") volverA = "alternativas.html";
+
+    document.getElementById("volverBtn").href = volverA;
+  </script>
+
+
+</body>
+</html>

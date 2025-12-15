@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zahira - Detalle</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="imagenes/logo.jpg" alt="Fragancias Perfume Gallery">
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="perfumes.html">Catálogo</a>
+      <a href="arabes.html">Árabes</a>
+    </nav>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </header>
+
+  <main class="ml-product-container">
+
+    <div class="ml-gallery">
+
+      <div class="ml-thumbs">
+        <img src="imagenes/zahira.jpg" onclick="changeImage(this.src)">
+        <img src="imagenes/zahiracaja.jpg" onclick="changeImage(this.src)">
+        <img src="imagenes/zahira3.jpg" onclick="changeImage(this.src)">
+      </div>
+
+      <img id="mainImage" src="imagenes/zahira.jpg" class="ml-main-img">
+
+    </div>
+
+    <div class="ml-info">
+
+      <h1>Zahira - Femenino</h1>
+      <p class="ml-price">$39.999</p>
+      <p class="ml-sub">Inspirado en: Yara (Lattafa)</p>
+
+      <a href="https://wa.me/5491138661846?text=Hola!%20Quiero%20comprar%20Zahira" 
+         target="_blank" class="ml-buy-btn">
+        Comprar ahora
+      </a>
+
+      <a href="arabes.html" class="ml-back-btn">Volver a perfumes árabes</a>
+
+      <hr>
+
+      <h3>Descripción</h3>
+      <p>Dulce, juvenil y floral. Ideal para uso diario y climas templados.</p>
+
+      <h3>Notas olfativas</h3>
+      <ul>
+        <li>Vainilla</li>
+        <li>Frutas rojas</li>
+        <li>Flores blancas</li>
+      </ul>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="imagenes/logo.jpg" class="logo-img">
+    </div>
+    <p class="copy">© 2025 Fragancias Perfume Gallery — Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    function changeImage(src) {
+      document.getElementById("mainImage").src = src;
+    }
+  </script>
+
+</body>
+</html>
